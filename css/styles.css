@@ -17,6 +17,7 @@
     --blue-border: hsl(206, 100%, 50%);
     --blue-dark: hsl(217, 100%, 34%);
   --blue-darkest: hsl(211, 68%, 13%);
+  --value: 0;
 }
 
 *, ::before, ::after {
@@ -142,17 +143,110 @@ video {
 }
 
 
+.curly {
+  padding: 10em 2em;
+  background-color: var(--blue-darkest);
+}
 
+.curly-wrap {
+  text-align: center;
+}
 
+.buy {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--gray-800);
+  border-radius: 99em;
+  box-shadow: 4px 4px 0 0 goldenrod, -4px -4px 0 0 var(--aqua);
 
+}
 
+.watch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8em 2em;
+  background-color: var(--gray-300);
+  
+}
 
+.wrapp {
+  height: 750px;
+  width: 550px;
+}
 
+.progress {
+  padding: 8rem 2rem;
+  background-color: var(--gray-400);
+  
+  height: 200vh;
+}
 
+.bar {
+  width: 500px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 7px;
+  position: relative;
+  margin-bottom: 1rem;
+}
 
+.bar--inside {
+  width: 0;
+  padding: 0;
+  padding-left: 1.5rem;
+  position: absolute;
+  height: 100%;
+  background-image: repeating-linear-gradient(45deg, var(--aqua-darkest), var(--aqua-darkest) 20px, var(--aqua-dark) 20px, var(--aqua-dark) 35.5px);
+  border-radius: 8px;
+  line-height: 50px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-size: 50px 50px;
+}
 
+.bar--inside p {
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 800;
+}
 
+.bar--inside-one.animate {
+  padding-left: 1.5em;
+  width: 100%;
+  --value: 70;
+  animation: hay 2s forwards, stripes 2s linear infinite;
+}
 
+.bar--inside-two.animate {
+  padding-left: 1.5em;
+  width: 0%;
+  --value: 85;
+  animation: hay 2s forwards, stripes 2s linear infinite;
+}
+
+@keyframes stripes {
+  0% {
+    background-position: 50px 0;
+  }
+
+100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes hay {
+  0% {
+    width: 0
+  }
+  
+  100% {
+    width: calc(var(--value) * 1%);
+  }
+}
 
 
 

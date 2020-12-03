@@ -21,8 +21,8 @@
      </symbol>
     </svg>
     
-    
-    <div class="hero">
+    <div class="container">
+    <!-- <div class="hero">
      
       <div class="cell cell--one">
         <h1>Trading Platform
@@ -70,7 +70,7 @@
         <div class="absolute">
           <svg width="100%" height="450">
           
-           <!-- THE 2ND L IS NEEDED ELSE IT WILL BE SYNTAX ERR -->
+           
             <path fill="rgba(0,0,0,.6)" d="M0 0 L500 0 C 200 -230 500 420 750 450 L 0 450 Z" />
             
           </svg>
@@ -86,15 +86,53 @@
            <path fill="var(--aqua-darkest)" d="M62 213 L140 237 120 193 Z" />
         </svg>
       </div>
+    </div> 
    
-   
-    
+    <div class="curly">
+      <div class="curly-wrap">
+        <svg width="800" height="300" stroke="white" stroke-width="2" fill="none">
+          
+          <path id="one" d="M5 10 C0 150 350 150 350 290" />
+          <path id="two" d="M266 10 C266 130 370 110 350 290" />
+          <use xlink:href="#two" transform="scale(-1,1)" x="-703"/>
+          <use xlink:href="#one" transform="scale(-1,1)" x="-702"/>
+        </svg>
+        <a href="#" class="buy">Buy Gemcoins</a>
+      </div>
 
+    </div> 
+    <div class="watch">
+      <div class="wrapp">
+        <svg width="500" height="700">
+          <path id="strap" fill="var(--aqua-dark)" d="M40 80 Q 70 60 70 0 L 380 0 Q 380 60 410 80 Z" />
+          <use xlink:href="#strap" transform="scale(1,-1)" y="-644" />
+          <rect x="25" y="72" width="400" height="500" rx="60" ry="60" stroke="#fff" stroke-width="16" />
+          <path fill="var(--aqua)" d="M90 130 L120 110 150 130 136 160 104 160 Z" />
+        </svg>
+      </div>
+    </div>-->
+    
+    <div class="progress">
+      <div class="bar">
+        <div class="bar--inside bar--inside-one">
+          <p>Usability &amp; Design <span>70%</span></p>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="bar--inside bar--inside-two">
+          <p>Programming <span>85%</span></p>
+        </div>
+      </div>
+    </div>
+
+   </div><!-- contianer -->
 
 
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="js/SplitText.min.js"></script>
+  <script src="js/DrawSVGPlugin.min.js"></script>
+  <script src="js/GSDevTools.min.js"></script>
   <script src="js/script.js"></script>
   </body>
 </html>
